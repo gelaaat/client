@@ -4,10 +4,12 @@ import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, Input
 const ModalForm = ({ isOpen, onOpenChange, idChart, updateChartModal, variable, zona }) => {
   const [select, setSelect] = useState('1_h')
   const [error, setError] = useState(false)
+
   const handlerSubmit = (e) => {
     const dataInici = document.getElementById('dataIniciInput').value || new Date().toISOString()
     const dataFinal = document.getElementById('dataFinalInput').value || new Date().toISOString()
     const url = import.meta.env.VITE_API_URL + `/getData/${variable}/${dataInici}/${dataFinal}/${select}/${zona}`
+
     if (dataInici == dataFinal && select) {
       alert('Data introduida incorrecte')
     } else {
@@ -32,7 +34,6 @@ const ModalForm = ({ isOpen, onOpenChange, idChart, updateChartModal, variable, 
         classNames={{
           backdrop: 'bg-gradient-to-t from-zinc-900 to-zinc-900/10 backdrop-opacity-20'
         }}
-        // onClose={handlerSubmit}
       >
         <ModalContent>
           {(onClose) => (
@@ -48,6 +49,7 @@ const ModalForm = ({ isOpen, onOpenChange, idChart, updateChartModal, variable, 
                     variant="bordered"
                     id='dataIniciInput'
                     className=''
+                    min='2023-10-31T00:00Z'
                     required
                   />
                   <Input
@@ -57,6 +59,7 @@ const ModalForm = ({ isOpen, onOpenChange, idChart, updateChartModal, variable, 
                     variant="bordered"
                     id='dataFinalInput'
                     className='mt-2'
+                    min='2023-10-31T00:00Z'
                     required
                   />
                   <Select

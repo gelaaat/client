@@ -21,8 +21,8 @@ export const configLiveDataExterior = {
   },
   pressio: {
     variable: 'pressio',
-    minValue: 900,
-    maxValue: 1200,
+    minValue: 980,
+    maxValue: 1050,
     startColor: 'white',
     endColor: 'red',
     url: import.meta.env.VITE_API_URL + '/getLiveData/pressio/exterior'
@@ -51,8 +51,8 @@ export const configLiveDataInterior = {
   },
   pressio: {
     variable: 'pressio',
-    minValue: 900,
-    maxValue: 1200,
+    minValue: 980,
+    maxValue: 1050,
     startColor: 'white',
     endColor: 'red',
     url: import.meta.env.VITE_API_URL + '/getLiveData/pressio/interior'
