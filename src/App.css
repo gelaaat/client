@@ -1,0 +1,44 @@
+/*#tabNavBar div:nth-child(1){
+  display: flex;
+  flex-wrap: wrap;
+  height: 40%;
+  align-items: flex-start;
+}*/
+
+#tabNavBar {
+  height: 100%;
+}
+
+#tabNavBar div:nth-child(1){
+  width: 100%;
+
+}
+
+@media only screen and (min-width: 768px) {
+  #tabNavBar div:nth-child(1){
+    display: block;
+    height: 100%;
+  } 
+}
+
+@media only screen and (max-width: 768px) {
+  #tabNavBar{
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .Dashboard {
+    height: calc(100% - 50px);
+    height: -o-calc(100% - 50px); /* opera */
+    height: -webkit-calc(100% - 50px); /* google, safari */
+    height: -moz-calc(100% - 50px); /* firefox */
+  } 
+}
+
+main {
+  height: calc(100% - 40px);
+  height: -o-calc(100% - 40px); /* opera */
+  height: -webkit-calc(100% - 40px); /* google, safari */
+  height: -moz-calc(100% - 40px); /* firefox */
+}
+
+
