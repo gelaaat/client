@@ -4,6 +4,9 @@ import LiveData from './LiveData'
 import { configLiveDataExterior, configLiveDataInterior } from '../configLiveData'
 
 const LiveDataDashboard = () => {
+  // Aquest component és el Dashboard de les variables en temps real
+  // Reutilitzem els components de LiveData i li passem per props la seva configuració
+
   return (
     <Card className="w-full justify-between overflow-hidden Dashboard">
       <CardBody className='flex flex-row pt-4 flex-wrap content-between'>
@@ -15,7 +18,7 @@ const LiveDataDashboard = () => {
             <LiveData
             className='m-2 flex flex-grow max-md:w-full'
             title='Temperatura'
-            config={configLiveDataExterior.temperatura}
+            config={ configLiveDataExterior.temperatura }
             />
             <LiveData
               className='m-2 flex flex-grow'

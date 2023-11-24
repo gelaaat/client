@@ -15,6 +15,7 @@ const LiveData = ({ className, config, title }) => {
       })
       .catch(err => err)
 
+    // Posem un interval per a què s'actualitzi cada minut els valors actuals
     const timer = setInterval(() => {
       setTrigger(!trigger)
     }, 60000)
@@ -27,7 +28,10 @@ const LiveData = ({ className, config, title }) => {
   return (
     <Card className={ className } id='liveDataa'>
       <CardBody className='flex flex-grow w-full justify-center items-center'>
-
+        {
+          // Primer ensenyarem un procés i quan la resposta de l'api es completi es renderitzarà el indicador
+          // En el cas que la resposta de l'api sigui fallida, el procés es quedarà actiu
+        }
         { !loading
           ? <CircularProgress
           label={title}

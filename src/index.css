@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Configuracions per utilitzar tailwind */
 
+/* Configuracions base */
 #root{
   width: 100%;
   height: 100vh;

@@ -27,6 +27,10 @@ const Dashboard = () => {
               <h3>Estació Exterior</h3>
             </CardHeader>
             <CardBody className='flex flex-wrap content-start flex-row relative bottom-3 justify-around p-2'>
+              {
+              // Amb el component de ChartComponent el reutilitzem i li passem les props per a què agafi la seva
+              // lògica i faci la trucada a l'api de la variable que es necessita
+              }
                <ChartComponent
                 className='m-1 max-w-[100%] w-full h-[350px]'
                 id='chartTemperaturaExterior'

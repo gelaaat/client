@@ -1,3 +1,5 @@
+// En aquest arxiu es troben les configuracions dels components que mostren les variables en temps real
+
 export const configLiveDataExterior = {
   temperatura: {
     variable: 'temperatura',

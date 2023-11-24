@@ -6,7 +6,7 @@ const PinComponent = ({ idPin, emoji, label, className }) => {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    // Primer hem de mirar l'estat del PIN
+    // Primer hem de mirar l'estat del PIN per poder posicionar el interruptor
     const url = import.meta.env.VITE_API_FLASK_URL + '/estatPin?' + new URLSearchParams({ pinId: idPin })
     fetch(url).then(res => res.json()).then(res => {
       setSelected(res.data)

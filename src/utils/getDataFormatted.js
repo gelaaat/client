@@ -1,12 +1,7 @@
-export const getDataHorariFormatted = (arrayData) => {
-  const arrayFormatted = arrayData.map(data => {
-    const dataToFormat = new Date(data)
-    const dia = dataToFormat.getHours()
-    return dia
-  })
-
-  return arrayFormatted
-}
+// Aquesta funció és per posar bonic el eix de les x en els gràfics
+// La sortida s'adapta als diferents intervals dels gràfics, si l'interval és de
+// 5 min, l'eix de les x serà 13:00, 13:05, 13:10...
+// si és en dies, la resposta serà 1/11, 2/11...
 
 export const getFecha = (arrayData, interval) => {
   const arrayFormatted = arrayData.map(data => {
